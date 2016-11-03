@@ -9,6 +9,11 @@ Simple REST services for the DreamHouse sample app.
     git clone https://github.com/dreamhouseapp/dreamhouse-rest-services
     ```
     
+1. Navigate to the `dreamhouse-rest-services` directory :
+    ```
+    cd dreamhouse-rest-services
+    ```
+
 1. Install the dependencies
     ```
     npm install
@@ -19,4 +24,4 @@ Simple REST services for the DreamHouse sample app.
     node server
     ```
     
-1. Test the services. Open a browser and access the following URL: http://localhost:5000/properties.
+1. Test the services. Open a browser and access the following URL: [http://localhost:5000/properties](http://localhost:5000/properties).
