@@ -7,6 +7,6 @@ exports.findAll = (req, res, next) => {
 };
 
 exports.findById = (req, res, next) => {
-    var id = req.params.id;
+    let id = req.params.id;
     res.json(BROKERS[id - 1]);
 }

@@ -5,7 +5,6 @@ let PROPERTIES = require('./mock-properties').data,
 
 exports.findAll = (req, res, next) => {
     let key = req.query.key;
-    console.log(key);
     if (key) {
         let result = PROPERTIES.filter(property =>
             (property.title +  ' ' + property.address +  ' ' + property.city + ' ' + property.description).toUpperCase().indexOf(key.toUpperCase()) > -1);
@@ -16,7 +15,7 @@ exports.findAll = (req, res, next) => {
 };
 
 exports.findById = (req, res, next) => {
-    var id = req.params.id;
+    let id = req.params.id;
     res.json(PROPERTIES[id - 1]);
 }
 
@@ -25,9 +24,9 @@ exports.getFavorites = (req, res, next) => {
 }
 
 exports.favorite = (req, res, next) => {
-    var property = req.body;
-    var exists = false;
-    for (var i = 0; i < favorites.length; i++) {
+    let property = req.body;
+    let exists = false;
+    for (let i = 0; i < favorites.length; i++) {
         if (favorites[i].id === property.id) {
             exists = true;
             break;
@@ -38,8 +37,8 @@ exports.favorite = (req, res, next) => {
 }
 
 exports.unfavorite = (req, res, next) => {
-    var id = req.params.id;
-    for (var i = 0; i < favorites.length; i++) {
+    let id = req.params.id;
+    for (let i = 0; i < favorites.length; i++) {
         if (favorites[i].id == id) {
             favorites.splice(i, 1);
             break;
@@ -49,7 +48,7 @@ exports.unfavorite = (req, res, next) => {
 }
 
 exports.like = (req, res, next) => {
-    var property = req.body;
+    let property = req.body;
     PROPERTIES[property.id - 1].likes++;
     res.json(PROPERTIES[property.id - 1].likes);
 }
