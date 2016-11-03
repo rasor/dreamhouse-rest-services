@@ -2,7 +2,7 @@
 
 Simple REST services for the DreamHouse sample app.
 
-## Installation instructions
+## Installation Instructions
 
 1. Clone the repository:
     ```
